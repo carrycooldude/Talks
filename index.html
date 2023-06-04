@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>TensorFlow.js browser example</title>
+
+    <!-- Load TensorFlow.js from a script tag -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+  </head>
+  <body>
+    <h1>TensorFlow.js example</h1>
+    <h2>Open the console to see the results.</h2>
+    <script>
+    const csvDataset = tf.data.csv('./data/IPL.csv' ,
+    {
+        columnConfigs: {
+
+            " result" : {
+                isLabel: true
+            }
+        }
+    }); 
+    csvDataset.forEachAsync(e => console.log(e));
+
+
+    const numOfFeatures = (csvDataset.columnNames()).length - 1;
+    //const numOfSamples = 50;
+    const convertedData = csvDataset.map(({xs, ys}) =>
+        {
+            const labels = [
+                ys[" result"] === " Mumbai Indians" ? 1 : 0 ,
+                ys[" result"] === " Chennai Super Kings" ? 1 : 0 ,
+                ys[" result"] === " Kolkata Knight Riders" ? 1 : 0 ,
+                ys[" result"] === " Royal Challengers Bangalore" ? 1 : 0 ,
+                ys[" result"] === " Punjab Kings" ? 1 : 0 ,
+                ys[" result"] === " Rajasthan Royals" ? 1 : 0 ,
+                ys[" result"] === " Delhi Capitals" ? 1 : 0 ,
+                ys[" result"] === " Sunrisers Hyderabad" ? 1 : 0 ,
+            ];
+            return {xs: Object.values(xs), ys: Object.values(labels)};
+        }).batch(50);
+    convertedData.forEachAsync(e => console.log(e));
+    const model = tf.sequential();
+    model.add(tf.layers.dense({inputShape: 5, activation: "sigmoid", units: 8}));
+    model.add(tf.layers.dense({activation: "softmax", units: 8}));
+    model.compile({loss: "categoricalCrossentropy", optimizer: tf.train.adam(0.06)});
+    model.fitDataset(convertedData, {epochs: 1000, callbacks: {
+        onEpochEnd: async(epoch, logs) => {
+            console.log("Epoch: " + epoch + " Loss: " + logs.loss);
+        }
+    }});
+    //model.predict(tf.tensor2d([[1, 0, 0, 0,0]], [1, 5])).print();
+    
+    </script>
+  </body>
+</html>
