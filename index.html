@@ -11,56 +11,54 @@
     <h1>TensorFlow.js example</h1>
     <h2>Open the console to see the results.</h2>
     <script>
-    const csvDataset = tf.data.CSVDataset('./data/IPL.csv' , {
-        columnConfigs: {
+        async function go(){
 
-            "result" : {
-                isLabel: true
+        const csvUrl = "./data/IPL.csv";
+        async function run(){
+
+            const csvDataset = tf.data.csv(csvUrl , {
+                columnConfigs: {
+
+                    result : {
+                        isLabel: true
+                    }
+                }
+            });
+            //console.log(csvDataset);
+            csvDataset.forEachAsync(e => console.log(e));
+
+            const numOfFeatures = (await csvDataset.columnNames()).length - 1;
+            console.log(numOfFeatures);
+            //const numOfSamples = 50;
+            const convertedData = csvDataset.map(({xs, ys}) =>
+                {
+                    const labels = [
+                        ys["result"] === "Mumbai Indians" ? 1 : 0 ,
+                        ys["result"] === "Chennai Super Kings" ? 1 : 0 ,
+                        ys["result"] === "Kolkata Knight Riders" ? 1 : 0 ,
+                        ys["result"] === "Royal Challengers Bangalore" ? 1 : 0 ,
+                        ys["result"] === "Punjab Kings" ? 1 : 0 ,
+                        ys["result"] === "Rajasthan Royals" ? 1 : 0 ,
+                        ys["result"] === "Delhi Capitals" ? 1 : 0 ,
+                        ys["result"] === "Sunrisers Hyderabad" ? 1 : 0 ,
+                    ];
+                    return {xs: Object.values(xs), ys: Object.values(labels)};
+                }).batch(5);
+            //console.log(convertedData);
+            convertedData.forEachAsync(e => console.log(e));
+            const model = tf.sequential();
+            model.add(tf.layers.dense({inputShape: [numOfFeatures], activation: "sigmoid", units: 8}));
+            model.add(tf.layers.dense({activation: "softmax", units: 8}));
+            //model.compile({optimizer: tf.train.adam(0.001),loss: "binaryCrossentropy", metrics: ['accuracy']});
+            model.compile({optimizer: tf.train.adam(0.001),loss: "categoricalCrossentropy", metrics: ['accuracy']});
+            return model.fitDataset(convertedData , {epochs: 10, callbacks: {
+                onEpochEnd: async(epoch, logs) => {
+                    console.log("Epoch: " + epoch + " Loss: " + logs.loss + " Accuracy: " + logs.acc);
+                }}});
             }
+        await run();
         }
-    });
-    console.log(csvDataset);
-    csvDataset.forEachAsync(e => console.log(e));
-    //const ys = csvDataset.map(({xs, ys}) => ys[" result"]);
-
-    const numOfFeatures = (csvDataset.columnNames()).length - 1;
-    console.log(numOfFeatures);
-    //const numOfSamples = 50;
-    const convertedData = csvDataset.map(({xs, ys}) =>
-        {
-            const labels = [
-                ys["result"] === "Mumbai Indians" ? 1 : 0 ,
-                ys["result"] === "Chennai Super Kings" ? 1 : 0 ,
-                ys["result"] === "Kolkata Knight Riders" ? 1 : 0 ,
-                ys["result"] === "Royal Challengers Bangalore" ? 1 : 0 ,
-                ys["result"] === "Punjab Kings" ? 1 : 0 ,
-                ys["result"] === "Rajasthan Royals" ? 1 : 0 ,
-                ys["result"] === "Delhi Capitals" ? 1 : 0 ,
-                ys["result"] === "Sunrisers Hyderabad" ? 1 : 0 ,
-            ];
-            return {xs: Object.values(xs), ys: Object.values(labels)};
-        }).batch(5);
-    console.log(convertedData);
-    tf.tensor(convertedData).forEachAsync(e => console.log(e));
-    const model = tf.sequential();
-    model.add(tf.layers.dense({inputShape: 5, activation: "sigmoid", units: 8}));
-    model.add(tf.layers.dense({activation: "softmax", units: 8}));
-    model.compile({optimizer: tf.train.adam(0.001),loss: "binaryCrossentropy", metrics: ['accuracy']});
-    // model.fitDataset(convertedData, {epochs: 10, callbacks: {
-    //     onEpochEnd: async(epoch, logs) => {
-    //         console.log("Epoch: " + epoch + " Loss: " + logs.loss + " Accuracy: " + logs.acc);
-    //     }
-    // }});
-     
-     model.fitDataset(convertedData , {epochs: 10, callbacks: {
-        onEpochEnd: async(epoch, logs) => {
-            console.log("Epoch: " + epoch + " Loss: " + logs.loss + " Accuracy: " + logs.acc);
-        }}});
-    const prediction = model.predict(csvDataset);
-    for(let i = 0; i < 10; i++) {
-        console.log("Prediction: " + prediction[i].dataSync() + " Actual: " + ys[i].dataSync());
-    }
-
+        go();
     </script>
   </body>
 </html>
