@@ -1,0 +1,101 @@
+match_number,team1_name,team2_name,team1_score,team2_score,result
+1,Mumbai Indians,Chennai Super Kings,0.8333333333333339,1.0,Mumbai Indians
+2,Royal Challengers Bangalore,Kolkata Knight Riders,0.3333333333333339,0.20000000000000018,Royal Challengers Bangalore
+3,Delhi Capitals,Sunrisers Hyderabad,0.0,0.0,Delhi Capitals
+4,Rajasthan Royals,Punjab Kings,0.5,0.40000000000000036,Rajasthan Royals
+5,Chennai Super Kings,Kolkata Knight Riders,0.666666666666667,0.7999999999999998,Chennai Super Kings
+6,Mumbai Indians,Royal Challengers Bangalore,1.0,1.0,Mumbai Indians
+7,Delhi Capitals,Punjab Kings,0.3333333333333339,0.40000000000000036,Delhi Capitals
+8,Rajasthan Royals,Sunrisers Hyderabad,0.0,0.0,Rajasthan Royals
+9,Kolkata Knight Riders,Punjab Kings,0.5,0.5999999999999996,Kolkata Knight Riders
+10,Mumbai Indians,Sunrisers Hyderabad,0.8333333333333339,0.7999999999999998,Mumbai Indians
+11,Royal Challengers Bangalore,Rajasthan Royals,0.666666666666667,0.5999999999999996,Royal Challengers Bangalore
+12,Delhi Capitals,Chennai Super Kings,0.16666666666666696,0.20000000000000018,Delhi Capitals
+13,Punjab Kings,Kolkata Knight Riders,0.3333333333333339,0.40000000000000036,Punjab Kings
+14,Rajasthan Royals,Mumbai Indians,0.666666666666667,0.7999999999999998,Rajasthan Royals
+15,Sunrisers Hyderabad,Royal Challengers Bangalore,0.16666666666666696,0.20000000000000018,Sunrisers Hyderabad
+16,Chennai Super Kings,Delhi Capitals,0.3333333333333339,0.40000000000000036,Chennai Super Kings
+17,Kolkata Knight Riders,Mumbai Indians,0.5,0.5999999999999996,Kolkata Knight Riders
+18,Punjab Kings,Rajasthan Royals,0.16666666666666696,0.20000000000000018,Punjab Kings
+19,Sunrisers Hyderabad,Chennai Super Kings,0.0,0.0,Sunrisers Hyderabad
+20,Royal Challengers Bangalore,Delhi Capitals,0.5,0.5999999999999996,Royal Challengers Bangalore
+21,Mumbai Indians,Punjab Kings,0.666666666666667,0.7999999999999998,Mumbai Indians
+22,Rajasthan Royals,Kolkata Knight Riders,0.16666666666666696,0.20000000000000018,Rajasthan Royals
+23,Chennai Super Kings,Royal Challengers Bangalore,0.3333333333333339,0.40000000000000036,Chennai Super Kings
+24,Delhi Capitals,Sunrisers Hyderabad,0.0,0.0,Delhi Capitals
+25,Kolkata Knight Riders,Rajasthan Royals,0.5,0.5999999999999996,Kolkata Knight Riders
+26,Mumbai Indians,Chennai Super Kings,0.8333333333333339,1.0,Mumbai Indians
+27,Punjab Kings,Sunrisers Hyderabad,0.3333333333333339,0.40000000000000036,Punjab Kings
+28,Royal Challengers Bangalore,Kolkata Knight Riders,0.5,0.5999999999999996,Royal Challengers Bangalore
+29,Rajasthan Royals,Delhi Capitals,0.0,0.0,Rajasthan Royals
+30,Chennai Super Kings,Punjab Kings,0.3333333333333339,0.40000000000000036,Chennai Super Kings
+31,Mumbai Indians,Sunrisers Hyderabad,0.666666666666667,0.7999999999999998,Mumbai Indians
+32,Kolkata Knight Riders,Royal Challengers Bangalore,0.16666666666666696,0.20000000000000018,Kolkata Knight Riders
+33,Delhi Capitals,Rajasthan Royals,0.0,0.0,Delhi Capitals
+34,Sunrisers Hyderabad,Chennai Super Kings,0.16666666666666696,0.20000000000000018,Sunrisers Hyderabad
+35,Punjab Kings,Mumbai Indians,0.5,0.5999999999999996,Punjab Kings
+36,Royal Challengers Bangalore,Rajasthan Royals,0.3333333333333339,0.40000000000000036,Royal Challengers Bangalore
+37,Kolkata Knight Riders,Delhi Capitals,0.0,0.0,Kolkata Knight Riders
+38,Chennai Super Kings,Mumbai Indians,0.666666666666667,0.7999999999999998,Chennai Super Kings
+39,Rajasthan Royals,Sunrisers Hyderabad,0.16666666666666696,0.20000000000000018,Rajasthan Royals
+40,Punjab Kings,Kolkata Knight Riders,0.3333333333333339,0.40000000000000036,Punjab Kings
+41,Royal Challengers Bangalore,Mumbai Indians,0.5,0.5999999999999996,Royal Challengers Bangalore
+42,Delhi Capitals,Chennai Super Kings,0.0,0.0,Delhi Capitals
+43,Sunrisers Hyderabad,Rajasthan Royals,0.16666666666666696,0.20000000000000018,Sunrisers Hyderabad
+44,Kolkata Knight Riders,Punjab Kings,0.5,0.5999999999999996,Kolkata Knight Riders
+45,Mumbai Indians,Royal Challengers Bangalore,0.666666666666667,0.7999999999999998,Mumbai Indians
+46,Rajasthan Royals,Delhi Capitals,0.0,0.0,Rajasthan Royals
+47,Chennai Super Kings,Kolkata Knight Riders,0.3333333333333339,0.40000000000000036,Chennai Super Kings
+48,Punjab Kings,Sunrisers Hyderabad,0.16666666666666696,0.20000000000000018,Punjab Kings
+49,Mumbai Indians,Rajasthan Royals,0.8333333333333339,1.0,Mumbai Indians
+50,Royal Challengers Bangalore,Sunrisers Hyderabad,0.3333333333333339,0.40000000000000036,Royal Challengers Bangalore
+51,Kolkata Knight Riders,Delhi Capitals,0.0,0.0,Kolkata Knight Riders
+52,Chennai Super Kings,Punjab Kings,0.3333333333333339,0.40000000000000036,Chennai Super Kings
+53,Rajasthan Royals,Mumbai Indians,0.666666666666667,0.7999999999999998,Rajasthan Royals
+54,Sunrisers Hyderabad,Royal Challengers Bangalore,0.16666666666666696,0.20000000000000018,Sunrisers Hyderabad
+55,Delhi Capitals,Chennai Super Kings,0.0,0.0,Delhi Capitals
+56,Punjab Kings,Kolkata Knight Riders,0.3333333333333339,0.40000000000000036,Punjab Kings
+57,Mumbai Indians,Sunrisers Hyderabad,0.8333333333333339,1.0,Mumbai Indians
+58,Royal Challengers Bangalore,Rajasthan Royals,0.666666666666667,0.5999999999999996,Royal Challengers Bangalore
+59,Delhi Capitals,Punjab Kings,0.3333333333333339,0.40000000000000036,Delhi Capitals
+60,Chennai Super Kings,Rajasthan Royals,0.0,0.0,Chennai Super Kings
+61,Kolkata Knight Riders,Mumbai Indians,0.5,0.5999999999999996,Kolkata Knight Riders
+62,Sunrisers Hyderabad,Royal Challengers Bangalore,0.16666666666666696,0.20000000000000018,Sunrisers Hyderabad
+63,Punjab Kings,Delhi Capitals,0.16666666666666696,0.20000000000000018,Punjab Kings
+64,Rajasthan Royals,Chennai Super Kings,0.0,0.0,Rajasthan Royals
+65,Mumbai Indians,Kolkata Knight Riders,0.666666666666667,0.7999999999999998,Mumbai Indians
+66,Royal Challengers Bangalore,Sunrisers Hyderabad,0.3333333333333339,0.40000000000000036,Royal Challengers Bangalore
+67,Delhi Capitals,Rajasthan Royals,0.0,0.0,Delhi Capitals
+68,Chennai Super Kings,Punjab Kings,0.3333333333333339,0.40000000000000036,Chennai Super Kings
+69,Kolkata Knight Riders,Sunrisers Hyderabad,0.5,0.5999999999999996,Kolkata Knight Riders
+70,Mumbai Indians,Royal Challengers Bangalore,1.0,1.0,Mumbai Indians
+71,Rajasthan Royals,Delhi Capitals,0.16666666666666696,0.20000000000000018,Rajasthan Royals
+72,Chennai Super Kings,Kolkata Knight Riders,0.3333333333333339,0.40000000000000036,Chennai Super Kings
+73,Punjab Kings,Sunrisers Hyderabad,0.16666666666666696,0.20000000000000018,Punjab Kings
+74,Mumbai Indians,Rajasthan Royals,0.8333333333333339,1.0,Mumbai Indians
+75,Royal Challengers Bangalore,Chennai Super Kings,0.666666666666667,0.5999999999999996,Royal Challengers Bangalore
+76,Delhi Capitals,Kolkata Knight Riders,0.0,0.0,Delhi Capitals
+77,Sunrisers Hyderabad,Punjab Kings,0.16666666666666696,0.20000000000000018,Sunrisers Hyderabad
+78,Rajasthan Royals,Mumbai Indians,0.666666666666667,0.7999999999999998,Rajasthan Royals
+79,Chennai Super Kings,Royal Challengers Bangalore,0.3333333333333339,0.40000000000000036,Chennai Super Kings
+80,Kolkata Knight Riders,Delhi Capitals,0.0,0.0,Kolkata Knight Riders
+81,Punjab Kings,Mumbai Indians,0.5,0.5999999999999996,Punjab Kings
+82,Sunrisers Hyderabad,Rajasthan Royals,0.16666666666666696,0.20000000000000018,Sunrisers Hyderabad
+83,Royal Challengers Bangalore,Kolkata Knight Riders,0.3333333333333339,0.40000000000000036,Royal Challengers Bangalore
+84,Delhi Capitals,Chennai Super Kings,0.0,0.0,Delhi Capitals
+85,Rajasthan Royals,Punjab Kings,0.16666666666666696,0.20000000000000018,Rajasthan Royals
+86,Mumbai Indians,Sunrisers Hyderabad,0.8333333333333339,1.0,Mumbai Indians
+87,Chennai Super Kings,Kolkata Knight Riders,0.3333333333333339,0.40000000000000036,Chennai Super Kings
+88,Royal Challengers Bangalore,Rajasthan Royals,0.666666666666667,0.5999999999999996,Royal Challengers Bangalore
+89,Delhi Capitals,Punjab Kings,0.3333333333333339,0.40000000000000036,Delhi Capitals
+90,Kolkata Knight Riders,Mumbai Indians,0.5,0.5999999999999996,Kolkata Knight Riders
+91,Sunrisers Hyderabad,Royal Challengers Bangalore,0.16666666666666696,0.20000000000000018,Sunrisers Hyderabad
+92,Chennai Super Kings,Delhi Capitals,0.3333333333333339,0.40000000000000036,Chennai Super Kings
+93,Rajasthan Royals,Kolkata Knight Riders,0.16666666666666696,0.20000000000000018,Rajasthan Royals
+94,Punjab Kings,Sunrisers Hyderabad,0.3333333333333339,0.40000000000000036,Punjab Kings
+95,Mumbai Indians,Chennai Super Kings,0.8333333333333339,1.0,Mumbai Indians
+96,Royal Challengers Bangalore,Delhi Capitals,0.666666666666667,0.5999999999999996,Royal Challengers Bangalore
+97,Kolkata Knight Riders,Punjab Kings,0.5,0.5999999999999996,Kolkata Knight Riders
+98,Rajasthan Royals,Sunrisers Hyderabad,0.16666666666666696,0.20000000000000018,Rajasthan Royals
+99,Chennai Super Kings,Mumbai Indians,0.3333333333333339,0.40000000000000036,Chennai Super Kings
+100,Delhi Capitals,Royal Challengers Bangalore,0.0,0.0,Delhi Capitals

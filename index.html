@@ -13,7 +13,7 @@
     <script>
         async function go(){
 
-        const csvUrl = "./data/IPL.csv";
+        const csvUrl = "./data/normalized_data.csv";
         async function run(){
 
             const csvDataset = tf.data.csv(csvUrl , {
@@ -24,12 +24,17 @@
                     }
                 }
             });
-            //console.log(csvDataset);
+            
+
+            
+            console.log(csvDataset);
             csvDataset.forEachAsync(e => console.log(e));
 
             const numOfFeatures = (await csvDataset.columnNames()).length - 1;
             console.log(numOfFeatures);
             //const numOfSamples = 50;
+            
+
             const convertedData = csvDataset.map(({xs, ys}) =>
                 {
                     const labels = [
@@ -43,14 +48,15 @@
                         ys["result"] === "Sunrisers Hyderabad" ? 1 : 0 ,
                     ];
                     return {xs: Object.values(xs), ys: Object.values(labels)};
-                }).batch(5);
-            //console.log(convertedData);
-            convertedData.forEachAsync(e => console.log(e));
+                }).batch(2);
+
+            
             const model = tf.sequential();
             model.add(tf.layers.dense({inputShape: [numOfFeatures], activation: "sigmoid", units: 8}));
             model.add(tf.layers.dense({activation: "softmax", units: 8}));
-            //model.compile({optimizer: tf.train.adam(0.001),loss: "binaryCrossentropy", metrics: ['accuracy']});
-            model.compile({optimizer: tf.train.adam(0.001),loss: "categoricalCrossentropy", metrics: ['accuracy']});
+            
+            model.compile({optimizer: tf.train.adam(0.001),loss: "binaryCrossentropy", metrics: ['accuracy']});
+            //model.compile({optimizer: tf.train.adam(0.001),loss: "categoricalCrossentropy", metrics: ['accuracy']});
             return model.fitDataset(convertedData , {epochs: 10, callbacks: {
                 onEpochEnd: async(epoch, logs) => {
                     console.log("Epoch: " + epoch + " Loss: " + logs.loss + " Accuracy: " + logs.acc);
